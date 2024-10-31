@@ -1,0 +1,41 @@
+{
+  "name": "sound-player",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "eshkere.playSound",
+        "title": "Play Sound"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "eshkere.playSound",
+        "key": "shift+2",
+        "when": "editorIsOpen"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.94.0",
+    "@types/node": "22.x"
+  },
+  "author": "Ваше Имя",
+  "license": "MIT",
+  "dependencies": {
+    "node-wav-player": "^1.0.0"
+  }
+}
